@@ -215,4 +215,60 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+  
+  
+  
+  
+  
+  
+  
+  
+    /**
+   * Carousel Dots para mobile en sección #team
+   */
+  document.addEventListener("DOMContentLoaded", function () {
+    const row = document.querySelector(".team .row.gy-4");
+    const dots = document.querySelectorAll(".carousel-dots .dot");
+
+    if (row && dots.length > 0) {
+      row.addEventListener("scroll", () => {
+        const card = row.querySelector(".col-lg-3");
+        const cardWidth = card.offsetWidth;
+        const scrollLeft = row.scrollLeft;
+        const index = Math.round(scrollLeft / (cardWidth + 16)); // 16px es el gap
+
+        dots.forEach((dot, i) => {
+          dot.classList.toggle("active", i === index);
+        });
+      });
+
+      // Dots clickeables (opcional)
+      dots.forEach((dot, i) => {
+        dot.addEventListener("click", () => {
+          const card = row.querySelector(".col-lg-3");
+          const cardWidth = card.offsetWidth;
+          row.scrollTo({
+            left: i * (cardWidth + 16),
+            behavior: "smooth"
+          });
+        });
+      });
+    }
+  });
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 })();

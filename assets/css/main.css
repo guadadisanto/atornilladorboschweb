@@ -82,6 +82,12 @@ body {
 
 
 
+.section-title h2::after {
+  display: none !important;
+}
+
+
+
 a {
   color: var(--accent-color);
   text-decoration: none;
@@ -495,7 +501,7 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   
-  color: black; /* <- CAMBIO HECHO */
+  color: #ffffff; /* <- CAMBIO HECHO */
   background-color: #009fe3; /* tu color celeste */
   font-size: 14px;
   padding-bottom: 50px;
@@ -520,7 +526,7 @@ h6 {
 }
 
 .footer .footer-about .logo span {
-  color: black;
+  color: #ffffff;
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -541,13 +547,13 @@ h6 {
   border-radius: 50%;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
   font-size: 16px;
-  color: black;
+  color: #ffffff;
   margin-right: 10px;
   transition: 0.3s;
 }
 
 .footer .social-links a:hover {
-   color: black;
+   color: #ffffff;
   border-color: var(--accent-color);
 }
 
@@ -586,12 +592,12 @@ h6 {
 
 .footer .footer-links ul a {
 
-  color: black;
+  color: #ffffff;
 }
 
 
 .footer .footer-links ul a:hover {
-  color: black;
+  color: #ffffff;
 }
 
 .footer .footer-contact p {
@@ -601,7 +607,7 @@ h6 {
 .footer .copyright {
   padding-top: 25px;
   padding-bottom: 25px;
- color: black;
+ color: #ffffff;
 }
 
 .footer .copyright p {
@@ -755,12 +761,12 @@ section,
 --------------------------------------------------------------*/
 .section-title {
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 6px;
   position: relative;
 }
 
 .section-title h2 {
-  font-size: 32px;
+  font-size: 38px;
   font-weight: 700;
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -794,13 +800,18 @@ section,
   padding: 120px 0 60px 0;
   display: flex;
   align-items: center;
- background-image: url(https://github.com/guadadisanto/Atornillador-inal-mbrico-Bosch/blob/main/assets/img/final14.png?raw=true);
+ background-image: url(https://github.com/guadadisanto/Atornillador-inal-mbrico-Bosch/blob/main/assets/img/finalfinal.png?raw=true);
 background-position: center center;
 background-repeat: no-repeat;
 background-size: cover;
 
 }
 
+@media (max-width: 640px) {
+  .hero {
+    background-image: url('https://github.com/guadadisanto/Atornillador-inal-mbrico-Bosch/blob/main/assets/img/mobilefinal.png?raw=true');
+  }
+}
 
 
 
@@ -835,16 +846,18 @@ background-size: cover;
 
 .hero .btn-get-started {
   color: white;
-  background-color: #0b4c84;
+  background-color: rgba(11, 76, 132, 0);
   font-family: var(--heading-font);
-  font-weight: 500;
+  font-weight: 571;
   font-size: 16px;
   letter-spacing: 0.5px;
   display: inline-block;
-  padding: 8px 30px;
-  border-radius: 999px;
+  padding: 12px 35px;
+  margin-top: 401px; /* ajustá este número según lo que quieras */
+margin-left: 20px;
+  border-radius: 1323px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgb(255, 255, 255);
   text-align: center;
   text-decoration: none;
 }
@@ -899,6 +912,7 @@ background-size: cover;
   .hero .btn-get-started,
   .hero .btn-watch-video {
     font-size: 13px;
+    margin-top: 568px;
   }
 }
 
@@ -913,7 +927,7 @@ background-size: cover;
 }
 
 /*--------------------------------------------------------------
-# About Section
+# tecnologia Section
 --------------------------------------------------------------*/
 .tecnologia .content h3 {
   font-size: 2rem;
@@ -921,23 +935,40 @@ background-size: cover;
 }
 
 
+.img-desktop {
+  display: block;
+  width: 1375px;       /* ancho fijo o en % según quieras */
+  height: auto;
+  margin-left: -68px;     /* centrada horizontalmente */
+}
 
-.tecnologia {
-  background-image: url('https://github.com/guadadisanto/Atornillador-inal-mbrico-Bosch/blob/main/assets/img/final18.png?raw=true');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-attachment: scroll; /* 👈 Este es el cambio importante */
-  position: relative;
+.img-mobile {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .img-desktop {
+    display: none;
+  }
+  .img-mobile {
+    display: block;
+    width: 100%; /* para que se adapte */
+   
+      margin-top: -107px;
+  }
 }
 
 
 
 
 
+
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
 
 .about {
-  background-image: url('https://github.com/guadadisanto/Atornillador-inal-mbrico-Bosch/blob/main/assets/img/final16.png?raw=true');
+  background-image: url('https://github.com/guadadisanto/Atornillador-inal-mbrico-Bosch/blob/main/assets/img/disantoseccionabout.png?raw=true');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -945,6 +976,14 @@ background-size: cover;
   position: relative;
 }
 
+
+@media (min-width: 768px) {
+  .bold-title,
+  .regular {
+    margin-left: 63px; /* o lo que necesites */
+    text-align: left;
+  }
+}
 
 
 
@@ -966,8 +1005,15 @@ background-size: cover;
 }
 
 .about .content p:last-child {
-  margin-bottom: 0;
+  margin-bottom: 30;
 }
+
+.bold-title {
+  font-weight: 700 !important;
+  font-size: 28px; /* si querés agrandar */
+}
+
+
 
 .about .content .read-more {
   background: var(--accent-color);
@@ -999,6 +1045,31 @@ background-size: cover;
 .about .content .read-more:hover i {
   margin-left: 10px;
 }
+
+
+
+
+@media (max-width: 767px) {
+  .about .content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about .content p,
+  .about .content h4 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .solo-desktop {
+    display: none;
+  }
+}
+
+
 
 /*--------------------------------------------------------------
 # Stats Section
@@ -1064,7 +1135,11 @@ background-size: cover;
 }
 
 .services .service-item .icon {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+
+  background-color: transparent; /* ✅ */
+  border: none;                  /* ✅ por si acaso */
+  box-shadow: none;              /* ✅ si hay alguna sombra */
+
   width: 72px;
   height: 72px;
   position: relative;
@@ -1073,8 +1148,11 @@ background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
+
   transition: ease-in-out 0.3s;
 }
+
+
 
 
 .services {
@@ -1085,7 +1163,19 @@ background-size: cover;
   background-size: cover;
 }
 
+.service-item.d-flex {
+  display: flex;
+  align-items: center; /* 👈 Agregá esto */
+  gap: 15px;            /* (Opcional) separa un poquito más imagen y texto */
+}
 
+
+
+
+.icon-img {
+  width: 68px;  /* Cambiá el valor según el tamaño que quieras */
+  height: auto; /* Esto mantiene la proporción */
+}
 
 
 .services .service-item .icon i {
@@ -1113,13 +1203,21 @@ background-size: cover;
   font-size: 14px;
 }
 
-.services .service-item:hover .icon {
-  background-color: var(--accent-color);
+
+
+
+.service-item .title .stretched-link {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
-.services .service-item:hover .icon i {
-  color: var(--contrast-color);
+
+.service-item .stretched-link:focus {
+  outline: none !important;
+  box-shadow: none !important;
 }
+
+
 
 /*--------------------------------------------------------------
 # Features Section
@@ -1257,9 +1355,23 @@ background-size: cover;
   text-align: center;
 }
 
+.equipado-texto {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  text-align: center;
+}
 
+.equipado-texto.broca {
+  margin-left: -50px;
+}
 
+.equipado-texto.brocas {
+  margin-left: 15px;
+}
 
+.equipado-texto.cable {
+  margin-left: 2px;
+}
 
 
 
@@ -1295,6 +1407,13 @@ background-size: cover;
     margin: 0 5px;
   }
 }
+
+.portfolio-content:hover img {
+  transform: scale(1.08);
+}
+
+
+
 
 .portfolio .portfolio-content {
   background-color: var(--surface-color);
@@ -1341,7 +1460,7 @@ background-size: cover;
 
 .portfolio .portfolio-content .portfolio-info p {
   color: color-mix(in srgb, var(--default-color), transparent 30%);
-  font-size: 14px;
+  font-size: 41px;
   margin-bottom: 0;
   padding-right: 50px;
 }
@@ -1349,6 +1468,80 @@ background-size: cover;
 .portfolio .portfolio-content:hover img {
   transform: scale(1.1);
 }
+
+
+
+
+
+@media (max-width: 575px) {
+  .portfolio-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .portfolio-content img {
+    width: 106%;
+    max-width: 509px; /* o lo que quieras */
+    height: auto;
+  }
+
+  .portfolio-info {
+    text-align: center;
+  }
+}
+
+@media (max-width: 575px) {
+  .img-equipado-1 {
+    margin-top: -13px;
+    margin-left: 46px;
+  }
+
+  .img-equipado-2 {
+    margin-top: 0;
+    margin-left: -21px;
+  }
+
+  .img-equipado-3 {
+    margin-top: 20px;
+    margin-left: -10px;
+  }
+}
+
+
+/* …tu CSS global aquí… */
+
+/* ---------- Ajustes mobile ---------- */
+@media (max-width: 575px) {
+
+  .equipado-texto.maletin {
+    margin-left: -15px !important;
+  }
+
+  .equipado-texto.brocas {
+    margin-left: -3px !important;
+  }
+
+  .equipado-texto.cable {
+    margin-left: -8px !important;
+  }
+}
+
+
+/* Oculta en desktop */
+.solo-mobile {
+  display: none;
+}
+
+/* Muestra solo en mobile */
+@media (max-width: 767px) {
+  .solo-mobile {
+    display: inline;
+  }
+}
+
+
 
 /*--------------------------------------------------------------
 # Pricing Section
@@ -1550,16 +1743,74 @@ background-size: cover;
   color: var(--accent-color);
 }
 
+
+/*--------------------------------------------------------------
+# tecnologia Section
+--------------------------------------------------------------*/
+.tecnologia {
+  background-image: url('https://github.com/guadadisanto/Atornillador-inal-mbrico-Bosch/blob/main/assets/img/disantoseccionabout.png?raw=true');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: scroll; /* 👈 Este es el cambio importante */
+  position: relative;
+}
+
+.img-tecnologia {
+  width: 225%;
+  max-width: none;
+  transition: transform 0.3s ease;
+  display: block;
+  margin-left: -85px;
+}
+
+.team .row {
+  margin-top: 38px;
+}
+
+
+.team .section-title {
+  margin-top: 60px; /* probá con 60px y ajustás según te guste */
+}
+
+
+
+.titulopush {
+  font-weight: 400;        /* Normal */
+  text-align: left;        /* Alineación */
+  margin-left: 60px;       /* Igual podés moverlo con esto */
+  line-height: 1.6;        /* Espaciado entre líneas */
+  color: var(--default-color); /* Color suave o gris según tu diseño */
+   margin-top: 63px;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .img-tecnologia {
+    width: 100%; /* En celulares vuelve a su tamaño original */
+  }
+}
+
+
+
+
+
+
 /*--------------------------------------------------------------
 # Team Section
---------------------------------------------------------------*/
+----------------3---------------------------------------------*/
+
+
+
 .team .team-member {
   background-color: var(--surface-color);
   box-shadow: 0px 0 69px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   text-align: center;
   border-radius: 5px;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .team .team-member {
@@ -1568,12 +1819,15 @@ background-size: cover;
   overflow: hidden;
   text-align: center;
   border-radius: 0;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 
+
+
+
 .team {
-  background-image: url('https://github.com/guadadisanto/Atornillador-inal-mbrico-Bosch/blob/main/assets/img/final17.png?raw=true');
+  background-image: url('https://github.com/guadadisanto/Atornillador-inal-mbrico-Bosch/blob/main/assets/img/disantosombra.png?raw=true');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1603,20 +1857,20 @@ background-size: cover;
   mask-size: contain;
   z-index: 1;
 }
-
+3
 .team .team-member .social {
   position: absolute;
   right: -100%;
   top: 30px;
   opacity: 0;
   border-radius: 4px;
-  transition: 0.5s;
+  transition: 0.2s;
   background: color-mix(in srgb, var(--background-color), transparent 60%);
   z-index: 2;
 }
 
 .team .team-member .social a {
-  transition: color 0.3s;
+  transition: color 0.2s;
   color: color-mix(in srgb, var(--default-color), transparent 50%);
   margin: 15px 12px;
   display: block;
@@ -1672,7 +1926,68 @@ background-size: cover;
 }
 
 
-.tecnologia
+
+
+
+
+
+.carousel-dots {
+  gap: 8px;
+}
+
+.carousel-dots .dot {
+  width: 10px;
+  height: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.carousel-dots .dot.active {
+  background-color: #333;
+}
+
+
+
+
+@media (max-width: 767px) {
+  .team .row.gy-4 {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding-bottom: 16px;
+
+    /* 🔥 Este valor centra perfectamente las tarjetas del 85% */
+    scroll-padding-left: calc((100vw - 108vw) / 2);
+  }
+
+  .team .row.gy-4 > .col-lg-3 {
+    flex: 0 0 85vw;
+    max-width: 85vw;
+    scroll-snap-align: center;
+  }
+
+  /* Ocultamos la barra de scroll */
+  .team .row.gy-4::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+
+
+@media (max-width: 767px) {
+  .team {
+    background-image: url('https://github.com/guadadisanto/Atornillador-inal-mbrico-Bosch/blob/main/assets/img/ahora2.png?raw=true');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
 
 
 
@@ -1768,7 +2083,7 @@ background-size: cover;
 .portfolio-details .swiper-button-next:after {
   color: rgba(255, 255, 255, 0.8);
   background-color: rgba(0, 0, 0, 0.15);
-  font-size: 24px;
+  font-size: 12px;
   border-radius: 50%;
   width: 48px;
   height: 48px;
@@ -1783,7 +2098,7 @@ background-size: cover;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 575px) {
+@media (max-width: 722px) {
 
   .portfolio-details .swiper-button-prev,
   .portfolio-details .swiper-button-next {
@@ -1808,9 +2123,9 @@ background-size: cover;
 }
 
 .portfolio-details .portfolio-info h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 535;
+  margin-bottom: 65px;
   padding-bottom: 20px;
   position: relative;
 }
@@ -1819,7 +2134,7 @@ background-size: cover;
   content: "";
   position: absolute;
   display: block;
-  width: 50px;
+  width: 14px;
   height: 3px;
   background: var(--accent-color);
   left: 0;
@@ -1858,7 +2173,7 @@ background-size: cover;
 }
 
 .portfolio-details .portfolio-description h2 {
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 700;
   margin-bottom: 20px;
 }
@@ -1883,7 +2198,7 @@ background-size: cover;
 }
 
 .portfolio-details .portfolio-description .testimonial-item h3 {
-  font-size: 18px;
+  font-size: 45px;
   font-weight: bold;
   margin: 15px 0 5px 0;
   padding-top: 20px;
@@ -1898,7 +2213,7 @@ background-size: cover;
 .portfolio-details .portfolio-description .testimonial-item .quote-icon-left,
 .portfolio-details .portfolio-description .testimonial-item .quote-icon-right {
   color: color-mix(in srgb, var(--accent-color), transparent 50%);
-  font-size: 26px;
+  font-size: 58px;
   line-height: 0;
 }
 
